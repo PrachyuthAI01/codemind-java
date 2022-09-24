@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class sample
+class vinnu
 {
     public static boolean isprime(int n)
     {
@@ -7,9 +7,9 @@ class sample
         {
             return false;
         }
-        for(int j=2;j<=(int)Math.sqrt(n);j++)
+        for(int i=2;i<=(int)Math.sqrt(n);i++)
         {
-            if(n%j==0)
+            if(n%i==0)
             {
                 return false;
             }
@@ -19,16 +19,21 @@ class sample
     public static void main(String args[])
     {
         Scanner v = new Scanner(System.in);
-        int a=v.nextInt();
-        int b=v.nextInt();
+        int n=v.nextInt();
+        int x=v.nextInt();
         int c=0;
-        for(int i=a;i<=b;i++)
+        for(int i=n;i<=x;i++)
         {
             if(isprime(i))
             {
-                c++;
+                c+=1;
+            }
+            else
+            {
+                continue;
             }
         }
         System.out.println(c);
     }
+
 }

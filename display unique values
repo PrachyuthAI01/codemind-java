@@ -1,0 +1,28 @@
+import java.util.*;
+class unique
+{
+    public static void main(String args[])
+    {
+        Scanner v=new Scanner(System.in);
+        int a=v.nextInt();
+        ArrayList<Integer> al=new ArrayList<Integer> ();
+        for(int i=0;i<a;i++)
+        {
+            al.add(v.nextInt());
+        }
+        HashSet<Integer> hs=new HashSet<Integer> (al);
+        int c=0;
+        for(int ele:hs)
+        {
+            if(Collections.frequency(al,ele)==1)
+            {
+                c=1;
+                System.out.print(ele+" ");
+            }
+        }
+        if(c==0)
+        {
+            System.out.print(-1);
+        }
+    }
+}
